@@ -5,7 +5,7 @@ import issuesModel from "../models/issues.js"
 const getIssues = async (req, res) => {
 
     try {
-        const data = await issuesModel.find({});
+        const data = await issuesModel.find({})
         res.send(data);
         console.log("Get issues Data Success");
     } catch (error) {

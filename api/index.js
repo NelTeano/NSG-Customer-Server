@@ -9,7 +9,7 @@ import { initDatabase } from './database.js'
 // ROUTES
 import issuesRoute from '../routes/issuesRoute.js';
 
-
+// hello
 const app = express();
 dotenv.config();      // ACCESS .ENV 
 initDatabase();
@@ -25,6 +25,7 @@ app.use(cors({
     // THE HTTP(ORIGIN) THAT WILL ALLOW TO ACCESS THE ROUTES
     credentials: true,
 }));
+
 
 const PORT = 3001;
 
