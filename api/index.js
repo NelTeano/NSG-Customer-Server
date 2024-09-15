@@ -7,16 +7,15 @@ import cors from 'cors';
 import { initDatabase } from './database.js'
 
 // ROUTES
-import issuesRoute from '../routes/issuesRoute.js';
+import ordersRoute from '../routes/ordersRoute.js';
 
-// hello
 const app = express();
 dotenv.config();      // ACCESS .ENV 
 initDatabase();
 
 app.use(express.urlencoded({ extended: true }));
 
-
+app.use(express.json());
 app.use(express.static("public"));
 app.use(cors({
     origin: [
@@ -35,6 +34,6 @@ app.listen(PORT, () => console.log(`Server ready on port http://localhost:${PORT
 
 
 // USE ROUTES
-app.use('/api', issuesRoute);
+app.use('/api', ordersRoute);
 
 export default app;
