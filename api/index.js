@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(express.static("public"));
 app.use(cors({
     origin: [
-        'http://localhost:3000',
+        'http://localhost:1020',
     ],  
     // THE HTTP(ORIGIN) THAT WILL ALLOW TO ACCESS THE ROUTES
     credentials: true,
